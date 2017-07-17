@@ -7,6 +7,7 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Icerik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Kullanici" Relationship="BlogModel.FK_Kullanici_Makale" FromRole="Makale" ToRole="Kullanici" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -21,5 +22,32 @@
   <EntityContainer Name="BlogEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Makale" EntityType="Self.Makale" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Kullanici" EntityType="BlogModel.Kullanici" />
+    <AssociationSet Name="FK_Kullanici_Makale" Association="BlogModel.FK_Kullanici_Makale">
+      <End Role="Makale" EntitySet="Makale" />
+      <End Role="Kullanici" EntitySet="Kullanici" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="Kullanici">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Adi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Soyadi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Mail" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Makale" Relationship="BlogModel.FK_Kullanici_Makale" FromRole="Kullanici" ToRole="Makale" />
+  </EntityType>
+  <Association Name="FK_Kullanici_Makale">
+    <End Type="BlogModel.Makale" Role="Makale" Multiplicity="1" />
+    <End Type="BlogModel.Kullanici" Role="Kullanici" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Makale">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Kullanici">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

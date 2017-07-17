@@ -18,6 +18,15 @@
         <label>Makale İçeriği : </label>
         <input type="text" id="txtIcerik" />
         <br />
+        <label>Adi : </label>
+        <input type="text" id="txtAdi" />
+        <br />
+        <label>Soyadi : </label>
+        <input type="text" id="txtSoyadi" />
+        <br />
+        <label>Mail : </label>
+        <input type="text" id="txtMail" />
+        <br />
         <button id="btnAdd">Add</button>
     </div>
     <script src="~/Scripts/jquery-3.1.1.js"></script>
@@ -29,6 +38,9 @@
         var makale = new Object();
         makale.Baslik = $("#txtBaslik").val();
         makale.Icerik = $("#txtIcerik").val();
+        makale.Kullanici.Adi = $("#txtAdi").val();
+        makale.Kullanici.Soyadi = $("#txtSoyadi").val();
+        makale.Kullanici.Mail = $("#txtMail").val();
 
   //      console.log(makale);
 

@@ -12,5 +12,9 @@ namespace WebClient.Controllers
         {
             return View();
         }
+        public ActionResult ArticleCreate()
+        {
+            return View();
+        }
     }
 }

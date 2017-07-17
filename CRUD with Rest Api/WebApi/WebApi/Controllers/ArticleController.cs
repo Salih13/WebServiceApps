@@ -17,8 +17,8 @@ namespace WebApi.Controllers
         private BlogEntities db = new BlogEntities();
 
         // GET: api/Article
-        public List<Makale> GetMakale()
-        {
+        public IEnumerable<Makale> GetMakale()
+        {           
             return db.Makale.ToList();
         }
 
@@ -78,7 +78,6 @@ namespace WebApi.Controllers
             {
                 return BadRequest(ModelState);
             }
-
             db.Makale.Add(makale);
 
             try
@@ -97,12 +96,12 @@ namespace WebApi.Controllers
                 }
             }
 
-            return Json("Basarili");
+            return Json("basarili");
         }
 
         // DELETE: api/Article/5
-        [ResponseType(typeof(Makale))]
-        public IHttpActionResult DeleteMakale(string id)
+        [AcceptVerbs("GET", "POST")]
+        public IHttpActionResult DeleteMakale(int id)
         {
             Makale makale = db.Makale.Find(id);
             if (makale == null)

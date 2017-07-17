@@ -6,7 +6,9 @@
     <edmx:Diagrams>
       <Diagram DiagramId="7d42161a3f5248ce9a8237116aa630ef" Name="Diagram1">
         <EntityTypeShape EntityType="BlogModel.Makale" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BlogModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlogModel.sysdiagrams" Width="1.5" PointX="7.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlogModel.Kullanici" Width="1.5" PointX="4.875" PointY="0.875" />
+        <AssociationConnector Association="BlogModel.FK_Kullanici_Makale" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

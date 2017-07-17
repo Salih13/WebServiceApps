@@ -27,5 +27,6 @@ namespace WebApi.Models
     
         public virtual DbSet<Makale> Makale { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<Kullanici> Kullanici { get; set; }
     }
 }

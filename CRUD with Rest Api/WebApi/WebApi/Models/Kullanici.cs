@@ -12,13 +12,14 @@ namespace WebApi.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Makale
+    public partial class Kullanici
     {
         public int Id { get; set; }
-        public string Baslik { get; set; }
-        public string Icerik { get; set; }
+        public string Adi { get; set; }
+        public string Soyadi { get; set; }
+        public string Mail { get; set; }
     
-        public virtual Kullanici Kullanici { get; set; }
+        public virtual IEnumerable<Makale> Makale { get; set; }
 
     }
 }
