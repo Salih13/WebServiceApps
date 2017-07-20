@@ -4,11 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="7d42161a3f5248ce9a8237116aa630ef" Name="Diagram1">
-        <EntityTypeShape EntityType="BlogModel.Makale" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BlogModel.sysdiagrams" Width="1.5" PointX="7.375" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="BlogModel.Kullanici" Width="1.5" PointX="4.875" PointY="0.875" />
-        <AssociationConnector Association="BlogModel.FK_Kullanici_Makale" />
+      <Diagram DiagramId="51fdd964418644f19dbbc70957bfbc9b" Name="Diagram1">
+        <EntityTypeShape EntityType="BlogModel.Kullanici" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlogModel.Makale" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="BlogModel.FK_Makale_Kullanici" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BlogModel.Kategori" Width="1.5" PointX="6.125" PointY="1" />
+        <AssociationConnector Association="BlogModel.FK_Makale_Kategori" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

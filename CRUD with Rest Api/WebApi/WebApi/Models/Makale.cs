@@ -17,8 +17,10 @@ namespace WebApi.Models
         public int Id { get; set; }
         public string Baslik { get; set; }
         public string Icerik { get; set; }
+        public int KullaniciID { get; set; }
+        public int KategoriID { get; set; }
     
         public virtual Kullanici Kullanici { get; set; }
-
+        public virtual Kategori Kategori { get; set; }
     }
 }

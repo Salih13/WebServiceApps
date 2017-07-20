@@ -20,6 +20,7 @@ namespace WebApi.Controllers
         public IEnumerable<Makale> GetMakale()
         {           
             return db.Makale.ToList();
+            
         }
 
         // GET: api/Article/5
