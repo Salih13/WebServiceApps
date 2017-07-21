@@ -12,8 +12,8 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Adi" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="Soyadi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="nvarchar" MaxLength="70" Nullable="false" />
+    <Property Name="Parola" Type="nvarchar" MaxLength="70" Nullable="false" />
     <Property Name="Mail" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Makale">

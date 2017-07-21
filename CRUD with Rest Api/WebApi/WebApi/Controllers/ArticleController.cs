@@ -19,8 +19,7 @@ namespace WebApi.Controllers
         // GET: api/Article
         public IEnumerable<Makale> GetMakale()
         {           
-            return db.Makale.ToList();
-            
+            return db.Makale.ToList();    
         }
 
         // GET: api/Article/5
@@ -96,7 +95,6 @@ namespace WebApi.Controllers
                     throw;
                 }
             }
-
             return Json("basarili");
         }
 

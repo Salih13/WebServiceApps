@@ -16,6 +16,7 @@
             <div style="float:right;">
                 @Html.ActionLink("Article Create", "ArticleCreate", "Home", new { @class = "navbar-brand" })
                 @Html.ActionLink("Article List", "Index", "Home", new { @class = "navbar-brand" })
+                @Html.ActionLink("Log In", "Login", "Home", new { @class = "navbar-brand" })
             </div>
         </div>
     </div>
@@ -28,6 +29,3 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
-<script src="~/Scripts/LoginAndRegister.js"></script>
-<script src="~/Scripts/ListTable.js"></script>
-<script src="~/Scripts/ArticleAdd.js"></script>

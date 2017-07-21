@@ -25,8 +25,8 @@ namespace WebApi.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Kategori> Kategori { get; set; }
         public virtual DbSet<Kullanici> Kullanici { get; set; }
         public virtual DbSet<Makale> Makale { get; set; }
-        public virtual DbSet<Kategori> Kategori { get; set; }
     }
 }
